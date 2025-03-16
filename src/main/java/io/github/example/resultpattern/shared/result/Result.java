@@ -55,4 +55,8 @@ public class Result<T> {
             super(false, error);
         }
     }
+
+    public record Error(String code, String description) {
+        public static final Error NONE = new Error("", "");
+    }
 }
